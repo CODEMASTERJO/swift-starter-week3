@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person {
+class Person {
     var name: String
     var age: Int
     var money: Int
@@ -17,9 +17,9 @@ struct Person {
         self.money = money
     }
     func orderCoffee(haveMoney: Int, coffee: Coffee) {
-        if haveMoney >= coffee.coffeePrice {
+        if haveMoney >= coffee.price {
             print("""
-            \(coffee.coffeePrice)원입니다. 잔돈 \(haveMoney - coffee.coffeePrice)원 드리겠습니다.
+            \(coffee.price)원입니다. 잔돈 \(haveMoney - coffee.price)원 드리겠습니다.
             \(coffee) 준비해 드리겠습니다. 픽업테이블에서 기다려주세요.
             """)
         } else {
@@ -50,7 +50,7 @@ enum Coffee {
     case cafeLatte
     case cafeMocha
     
-    var coffeeName: String {
+    var name: String {
         switch self {
         case.americano:
             return "아메리카노"
@@ -61,7 +61,7 @@ enum Coffee {
         }
     }
     
-    var coffeePrice: Int {
+    var price: Int {
         switch self {
         case.americano:
             return 4000
