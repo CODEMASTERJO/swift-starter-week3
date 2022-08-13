@@ -20,7 +20,9 @@ let missKim: Person = Person(
 
 let yagombucks: CoffeeShop = CoffeeShop(
     shopName: "야곰벅스",
-    menu: [selectedMenu.name],
+    menu: [Coffee.americano.name: Coffee.americano.price,
+           Coffee.cafeLatte.name: Coffee.cafeLatte.price,
+           Coffee.cafeMocha.name: Coffee.cafeMocha.price],
     pickupTable: [],
     barista: misterLee)
 
