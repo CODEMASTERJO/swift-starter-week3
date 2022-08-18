@@ -21,9 +21,19 @@ class CoffeeShop {
         self.barista = barista
     }
     
-    func takeOrders(coffee: Coffee) {
-        totalSales = totalSales + coffee.price
-        print("\(coffee.name) 주문받았습니다.")
+    func takeOrders(customerMoney: Int, coffee: Coffee) {
+        if customerMoney >= coffee.price {
+            var balance: Int
+            totalSales = totalSales + coffee.price
+            balance = customerMoney - coffee.price
+            print("""
+            \(coffee.name) 주문받았습니다.
+            \(coffee.price)원입니다. 잔돈 \(balance)원 드리겠습니다.
+             \(coffee) 준비해 드리겠습니다. 픽업테이블에서 기다려주세요.
+            """)
+        } else {
+            print("잔액이 부족합니다.")
+        }
     }
     
     func makeCoffee(orderer: String, coffee: Coffee) {
