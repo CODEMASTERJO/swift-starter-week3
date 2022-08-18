@@ -1,8 +1,8 @@
 //
-//  Filedf.swift
+//  File.swift
 //  CodeStarterCamp_Week3
 //
-//  Created by 조용현 on 2022/08/12.
+//  Created by 조용현 on 2022/08/18.
 //
 
 import Foundation
