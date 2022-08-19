@@ -9,12 +9,12 @@
 import Foundation
 
 let misterLee: Person = Person(
-    name: "Suhyuk Lee",
+    name: "misterLee",
     age: 22,
     money: 15000)
 
 let missKim: Person = Person(
-    name: "Mina Kim",
+    name: "missKim",
     age: 25,
     money: 20000)
 
@@ -26,7 +26,8 @@ let yagombucks: CoffeeShop = CoffeeShop(
     pickupTable: [],
     barista: misterLee)
 
-misterLee.order(Coffee.americano)
-yagombucks.takeOrders(Coffee.americano)
-yagombucks.make(Coffee.americano, from: "misterLee")
+missKim.order(Coffee.americano, yagombucks)
+print(missKim.money)
 print(yagombucks.totalSales)
+//yagombucks.takeOrders(Coffee.americano)
+//yagombucks.make(Coffee.americano, from: "misterLee")
