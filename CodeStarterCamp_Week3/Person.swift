@@ -18,7 +18,12 @@ class Person {
         self.money = money
     }
     
-    func orderCoffee(coffee: Coffee) {
-        print("\(coffee.name) 하나 주세요.")
+    func order(_ coffee: Coffee) {
+        if money >= coffee.price {
+            money -= coffee.price
+            print("\(coffee.name) 하나 주세요.")
+        } else {
+            print("잔액이 \(coffee.price-money)원만큼 부족합니다.")
+        }
     }
 }

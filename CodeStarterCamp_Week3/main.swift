@@ -26,3 +26,7 @@ let yagombucks: CoffeeShop = CoffeeShop(
     pickupTable: [],
     barista: misterLee)
 
+misterLee.order(Coffee.americano)
+yagombucks.takeOrders(Coffee.americano)
+yagombucks.make(Coffee.americano, from: "misterLee")
+print(yagombucks.totalSales)
