@@ -11,12 +11,14 @@ import Foundation
 let misterLee: Person = Person(
     name: "misterLee",
     age: 22,
-    money: 15000)
+    money: 3000)
 
 let missKim: Person = Person(
     name: "missKim",
     age: 25,
     money: 20000)
+
+let coda: Person = Person(name: "Coda", age: 33, money: 10000)
 
 let yagombucks: CoffeeShop = CoffeeShop(
     shopName: "야곰벅스",
@@ -27,7 +29,13 @@ let yagombucks: CoffeeShop = CoffeeShop(
     barista: misterLee)
 
 missKim.order(Coffee.americano, yagombucks)
-print(missKim.money)
-print(yagombucks.totalSales)
-//yagombucks.takeOrders(Coffee.americano)
-//yagombucks.make(Coffee.americano, from: "misterLee")
+print("missKim 잔액 : \(missKim.money)원")
+print("야곰벅스 매출: \(yagombucks.totalSales)원")
+print("----------------------------------")
+coda.order(Coffee.cafeMocha, yagombucks)
+print("Coda 잔액 : \(coda.money)원")
+print("야곰벅스 매출: \(yagombucks.totalSales)원")
+print("----------------------------------")
+misterLee.order(Coffee.cafeLatte, yagombucks)
+print("Coda 잔액 : \(misterLee.money)원")
+print("야곰벅스 매출: \(yagombucks.totalSales)원")
