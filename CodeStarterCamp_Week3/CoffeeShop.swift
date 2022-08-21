@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CoffeeShop {
+struct CoffeeShop {
     var shopName: String
     var totalSales: Int = 0
     var menu: [String: Int]
@@ -21,7 +21,7 @@ class CoffeeShop {
         self.barista = barista
     }
     
-    func takeOrder(_ coffee: Coffee) {
+    mutating func takeOrder(_ coffee: Coffee) {
             totalSales += coffee.price
             print("""
             \(coffee.name) 주문받았습니다.
@@ -29,12 +29,12 @@ class CoffeeShop {
             """)
         }
     
-    func informFinishCoffee(_ coffee: Coffee, from name: String) {
+    mutating func informFinishCoffee(_ coffee: Coffee, from name: String) {
         pickupTable.append(coffee)
         print("\(name) 님이 주문하신 \(coffee.name)(이/가) 준비되었습니다. 픽업대에서 가져가주세요.")
     }
     
-    func deliver(_ coffee: Coffee) {
+    mutating func deliver(_ coffee: Coffee) {
         pickupTable.append(coffee)
     }
     

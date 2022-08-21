@@ -20,7 +20,7 @@ let missKim: Person = Person(
 
 let coda: Person = Person(name: "Coda", age: 33, money: 10000)
 
-let yagombucks: CoffeeShop = CoffeeShop(
+var yagombucks: CoffeeShop = CoffeeShop(
     shopName: "야곰벅스",
     menu: [Coffee.americano.name: Coffee.americano.price,
            Coffee.cafeLatte.name: Coffee.cafeLatte.price,
@@ -28,14 +28,14 @@ let yagombucks: CoffeeShop = CoffeeShop(
     pickupTable: [],
     barista: misterLee)
 
-missKim.order(.americano, from: yagombucks)
+missKim.order(.americano, from: &yagombucks)
 print("missKim 잔액 : \(missKim.money)원")
 print("야곰벅스 매출: \(yagombucks.totalSales)원")
 print("----------------------------------")
-coda.order(.cafeMocha, from: yagombucks)
+coda.order(.cafeMocha, from: &yagombucks)
 print("Coda 잔액 : \(coda.money)원")
 print("야곰벅스 매출: \(yagombucks.totalSales)원")
 print("----------------------------------")
-misterLee.order(.cafeLatte, from: yagombucks)
+misterLee.order(.cafeLatte, from: &yagombucks)
 print("Coda 잔액 : \(misterLee.money)원")
 print("야곰벅스 매출: \(yagombucks.totalSales)원")

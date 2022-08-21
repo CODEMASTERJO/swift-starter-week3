@@ -18,7 +18,7 @@ class Person {
         self.money = money
     }
     
-    func order(_ coffee: Coffee, from: CoffeeShop) {
+    func order(_ coffee: Coffee, from: inout CoffeeShop) {
         if money >= coffee.price {
             money -= coffee.price
             print("\(coffee.name) 하나 주세요.")
