@@ -33,4 +33,12 @@ class CoffeeShop {
         pickupTable.append(coffee)
         print("\(name) 님이 주문하신 \(coffee.name)(이/가) 준비되었습니다. 픽업대에서 가져가주세요.")
     }
+    
+    func deliver(_ coffee: Coffee) {
+        pickupTable.append(coffee)
+    }
+    
+    func inform(_ coffee: Coffee, from name: String) {
+        print("\(name) 님이 주문하신 \(coffee.name)(이/가) 준비되었습니다. 픽업대에서 가져가주세요.")
+    }
 }
