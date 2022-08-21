@@ -28,14 +28,14 @@ let yagombucks: CoffeeShop = CoffeeShop(
     pickupTable: [],
     barista: misterLee)
 
-missKim.order(Coffee.americano, yagombucks)
+missKim.order(.americano, from: yagombucks)
 print("missKim 잔액 : \(missKim.money)원")
 print("야곰벅스 매출: \(yagombucks.totalSales)원")
 print("----------------------------------")
-coda.order(Coffee.cafeMocha, yagombucks)
+coda.order(.cafeMocha, from: yagombucks)
 print("Coda 잔액 : \(coda.money)원")
 print("야곰벅스 매출: \(yagombucks.totalSales)원")
 print("----------------------------------")
-misterLee.order(Coffee.cafeLatte, yagombucks)
+misterLee.order(.cafeLatte, from: yagombucks)
 print("Coda 잔액 : \(misterLee.money)원")
 print("야곰벅스 매출: \(yagombucks.totalSales)원")

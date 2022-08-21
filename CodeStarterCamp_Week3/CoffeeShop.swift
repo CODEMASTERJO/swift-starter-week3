@@ -21,7 +21,7 @@ class CoffeeShop {
         self.barista = barista
     }
     
-    func takeOrders(_ coffee: Coffee) {
+    func takeOrder(_ coffee: Coffee) {
             totalSales += coffee.price
             print("""
             \(coffee.name) 주문받았습니다.
@@ -29,8 +29,8 @@ class CoffeeShop {
             """)
         }
     
-    func make(_ coffee: Coffee, from name: String) {
+    func informFinishCoffee(_ coffee: Coffee, from name: String) {
         pickupTable.append(coffee)
-        print("\(name)님이 주문하신 \(coffee.name)(이/가) 준비되었습니다. 픽업대에서 가져가주세요.")
+        print("\(name) 님이 주문하신 \(coffee.name)(이/가) 준비되었습니다. 픽업대에서 가져가주세요.")
     }
 }
